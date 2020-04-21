@@ -1,6 +1,26 @@
 .overview{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    @include mq(xlarge){
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding:30px;
+    }
     &__header{
         color:$light-dark-text-color;
+        width: 85%;
+        margin: 0 auto;
+        transition: $darkTheme-transition;
+        &--darkMode{
+            color:white;
+        }
+        @include mq (xlarge){
+        width:100%;
+        padding-left: 25px;
+        margin-bottom: 10px;
+        }
     }
     &__box{
         width:85%;
@@ -12,6 +32,10 @@
         padding:25px;
         border-radius: 5px;
         transition: $darkTheme-transition;
+        @include mq (xlarge){
+            width:22%;
+            margin:17px 5px;
+            }
         &--darkMode{
             background-color: $dark-box-color;
         }

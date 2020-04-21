@@ -15,6 +15,7 @@ class DashBoard {
 
         this.overviewBox = document.querySelectorAll('.overview__box');
         this.overviewBoxTitle = document.querySelectorAll('.overview__result');
+        this.overviewBoxHeader = document.querySelector('.overview__header');
 
     }
 
@@ -45,6 +46,8 @@ class DashBoard {
         this.overviewBoxTitle.forEach((el) => {
             el.classList.toggle('overview__result--darkMode')
         })
+
+        this.overviewBoxHeader.classList.toggle('overview__header--darkMode')
     }
 
     init() {

@@ -6,6 +6,15 @@
     border:none;
 }
 
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    @include mq(xlarge){
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
 ::-webkit-scrollbar{
     width: 6px;
 }

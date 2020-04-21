@@ -7,6 +7,27 @@
   border: none;
 }
 
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 1200px) {
+  .wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -54,6 +75,12 @@
   transition: 0.3s linear;
 }
 
+@media (min-width: 1200px) {
+  .background {
+    padding: 25px 15px 85px 15px;
+  }
+}
+
 .background--darkMode {
   background-color: #1f212e;
 }
@@ -64,6 +91,13 @@
   color: #1e202a;
   -webkit-transition: 0.3s linear;
   transition: 0.3s linear;
+  margin-bottom: 2.5px;
+}
+
+@media (min-width: 1200px) {
+  .background__title {
+    font-size: 30px;
+  }
 }
 
 .background__title--darkMode {
@@ -80,6 +114,12 @@
   margin-bottom: 20px;
 }
 
+@media (min-width: 1200px) {
+  .background__paragraf {
+    font-size: 15px;
+  }
+}
+
 .background__paragraf:nth-child(3) {
   width: 50%;
   -ms-flex-item-align: center;
@@ -91,6 +131,13 @@
   border: none;
   padding: 0;
   margin: 0;
+}
+
+@media (min-width: 1200px) {
+  .background__paragraf:nth-child(3) {
+    text-align: end;
+    margin-right: 5px;
+  }
 }
 
 .background__darkMode {
@@ -145,7 +192,18 @@
       justify-content: space-around;
 }
 
+@media (min-width: 1200px) {
+  .socialMedia {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 30px;
+  }
+}
+
 .smBox {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -158,10 +216,18 @@
   border-radius: 5px;
   background-color: #f0f2fa;
   margin: 20px auto;
-  padding: 25px 0px;
+  padding: 25px;
   text-align: center;
   -webkit-transition: 0.3s linear;
   transition: 0.3s linear;
+  z-index: 1;
+}
+
+@media (min-width: 1200px) {
+  .smBox {
+    width: 22%;
+    margin: 10px;
+  }
 }
 
 .smBox--darkMode {
@@ -229,8 +295,76 @@
   color: #dc414c;
 }
 
+.smBox__spanTop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.smBox:nth-child(1) .smBox__spanTop {
+  background-color: deepskyblue;
+}
+
+.smBox:nth-child(2) .smBox__spanTop {
+  background-color: #1ca0f2;
+}
+
+.smBox:nth-child(3) .smBox__spanTop {
+  background: -webkit-gradient(linear, left top, right top, from(#b36d00), color-stop(50%, #942e50));
+  background: linear-gradient(90deg, #b36d00 0%, #942e50 50%);
+}
+
+.smBox:nth-child(4) .smBox__spanTop {
+  background-color: #c4032a;
+}
+
+.overview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+@media (min-width: 1200px) {
+  .overview {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 30px;
+  }
+}
+
 .overview__header {
   color: #63687e;
+  width: 85%;
+  margin: 0 auto;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.overview__header--darkMode {
+  color: white;
+}
+
+@media (min-width: 1200px) {
+  .overview__header {
+    width: 100%;
+    padding-left: 25px;
+    margin-bottom: 10px;
+  }
 }
 
 .overview__box {
@@ -249,6 +383,13 @@
   border-radius: 5px;
   -webkit-transition: 0.3s linear;
   transition: 0.3s linear;
+}
+
+@media (min-width: 1200px) {
+  .overview__box {
+    width: 22%;
+    margin: 17px 5px;
+  }
 }
 
 .overview__box--darkMode {
@@ -294,5 +435,16 @@
 .overview__box:nth-child(8) :nth-last-child(1),
 .overview__box:nth-child(9) :nth-last-child(1) {
   color: #dc414c;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding: 2.5px;
+}
+
+.attribution a {
+  color: #3e52a3;
+  text-decoration: none;
 }
 /*# sourceMappingURL=style.css.map */
