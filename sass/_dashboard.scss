@@ -1,0 +1,122 @@
+.dashboardWrap{
+    padding: 0px 10px;
+}
+
+.background{
+display: flex;
+flex-wrap: wrap;
+align-content: space-between;
+position: relative;
+top:0;
+left:0;
+width:100%;
+background-color:$light-top-box-color;
+border-bottom-left-radius: 15px;
+border-bottom-right-radius:15px;
+padding: 25px 15px 65px 15px;
+&__title{
+    width:100%;
+    font-size: 20px;
+    color:$light-very-dark-text-color;
+}
+&__paragraf{
+    width:100%;
+    font-size: 12px;
+    font-weight: 600;
+    color:$light-dark-text-color;
+    border-bottom:1px solid $light-dark-text-color;
+    padding-bottom:20px;
+    margin-bottom: 20px;
+    &:nth-child(3){
+        width:50%;
+        align-self: center;
+        flex-grow: 1;
+        border:none;
+        padding:0;
+        margin:0;
+    }
+}
+&__darkMode{
+    position: relative;
+    width:50px;
+    height: 25px;
+    border-radius: 30px;
+    background-color: hsl(230, 22%, 74%);
+    padding: 2px;
+    cursor: pointer;
+    &-switch{
+        position: relative;
+        left:0;
+        width:17.5px;
+        height: 17.5px;
+        background-color: $light-top-box-color;
+        border-radius: 50%;
+        transition: 0.2s linear;
+        &--switched{
+            left:61%;
+        }
+    }
+}
+hr{
+    margin: 20px 0px;
+    color:black;
+ }
+}
+
+.socialMedia{
+    position: relative;
+    top:-60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.smBox{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+width:85%;
+border-radius: 10px;
+background-color:$light-box-color;
+margin:20px auto;
+padding: 25px 0px;
+text-align: center;
+&__img{
+    width:25px;
+    height: 25px;
+    display: block;
+    margin:0px 5px;
+ }
+ &__mainContent{
+     width:100%;
+     margin: 30px 0px;
+     text-align: center;
+     & span:nth-child(2){
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        color:$light-dark-text-color;
+    }
+ }
+ &__result{
+     font-size: 4rem;
+     color:$light-very-dark-text-color;
+ }
+ &__imgUp{
+     width:10px;
+     height: 10px;
+     align-self: center;
+     margin-right: 5px;
+ }
+ &__today{
+     font-size: 1.2rem;
+     color:$green-arrow;
+ }
+ &__span{
+     font-weight: 600;
+     align-self: center;
+ }
+}
+
+.smBox:nth-last-child(1) h2:nth-last-child(1){
+    color:$red-arrow;
+}
